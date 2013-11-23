@@ -1,0 +1,678 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath}
+\usepackage[cp1251]{inputenc}%включаем свою кодировку: koi8-r или utf8 в UNIX, cp1251 в Windows
+\usepackage[english,russian]{babel}%используем русский и английский языки с переносами
+\usepackage{setspace}
+\usepackage{graphicx}
+%\makeindex
+\usepackage{geometry} % Меняем поля страницы
+\geometry{left=3cm}% левое поле
+\geometry{right=1.5cm}% правое поле
+\geometry{top=2cm}% верхнее поле
+\geometry{bottom=2cm}% нижнее поле
+%\renewcommand{\baselinestretch}{1.5}
+%\title{\textbf{Проверка жирным}{ обычный}\textit{ курсив}}
+%\date{\today{текущая дата}}
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+\textbf{САНКТ-ПЕТЕРБУРГСКИЙ НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ \\
+УНИВЕРСИТЕТ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ, \\
+МЕХАНИКИ И ОПТИКИ \\}
+
+
+\end{center}
+\begin{flushright}
+{Факультет\hrulefill компьютерных технологий и управления\hrulefill \\
+Кафедра \hrulefillвычислительной техники \hrulefill\\
+Направление подготовки(специальность) \hrulefill 230100\hrulefill}
+\end{flushright}
+\vspace{8em}
+
+\begin{center}
+\Large \textbf{О Т Ч Е Т \\ о практике}
+\end{center}
+
+\vspace{2.5em}
+ 
+
+\vspace{6em}
+ 
+\begin{flushleft}
+\textbf{Тема задания:}  \hrulefill Моделирование сетей средствами программы NS-3 \hrulefill \\
+\vspace{1.5em}
+\textbf{Студент}  \hrulefill Бескоровайный Д.В.,Валишевский М.В., { }группа 3103\hrulefill\hrulefill\hrulefill\\
+\vspace{1.5em}
+\textbf{Руководитель практики} \hrulefill Соснин В.В. \hrulefill\\
+\vspace{1.5em}
+\textbf{Оценка руководителя}  \hrulefill\makebox[6cm] { }
+\end{flushleft}
+ \vspace{6em}
+ \makebox[11cm]{}\textbf{Дата} \hrulefill
+ 
+\vspace{\fill}
+
+\begin{center}
+\textbf{Санкт-Петербург \\
+2013г.}  
+\end{center}
+\newpage
+\tableofcontents
+\newpage
+%\maketitle 
+
+\begin{large} % кегль 14
+\begin{spacing}{1.5} % межстрочный интервал - полуторный
+
+
+\begin{flushleft}
+\section{TeX} 
+\end{flushleft}
+
+\TeX{} — это созданная американским математиком и программистом Дональдом Кнутом (Donald E. Knuth) система для верстки текстов с формулами. Сам по себе \TeX{} представляет собой машинно-независимый язык форматирования полиграфических документов. Автор \TeX{}’а, профессор Станфордского университета США Дональд Кнут, определяет \TeX{} как “инструмент для превращения набранного компьютерным образом манускрипта в документ, полиграфическое качество которого сопоставимо с тем, что дают самые современные печатающие устройства”. Фундамент форматирующего инструмента \TeX{}’а образуют более 300 команд-примитивов. Примитивы осуществляют операции нижнего уровня, неразложимые на более простые функциональные компоненты. На основе примитивов можно строить макрокоманды, которые могут иметь параметры и включать другие макрокоманды. Совокупность макрокоманд, подчиненных общим функциональным целям, объединяются в макронадстройки. В частности, \LaTeX{} — это созданная Лесли Лэмпортом (Leslie Lamport) издательская система на базе \TeX{}’а. Latex не является монолитной программой и состоит из набора пакетов, причём набор пакетов не фиксирован, что позволяет создавать дистрибутивы, преследующие ту или иную цель.
+\\
+
+Все издательские системы на базе \TeX{}’а обладают достоинствами, заложенными в самом \TeX{}’е.   Из преимуществ данной системы следует отметить, что практически никакая другая из существующих в настоящее время издательских систем не может сравниться с \TeX{}’ом в полиграфическом качестве текстов с математическими формулами. Также данная система обладает довольно низкими системными требованиями и на сегодняшний день реализована на всех современных компьютерных платформах,именно благодаря этому \TeX{} стал международным языком для обмена математическими и физическими статьями.
+\\
+
+Однако у данной системы есть и недостатки. Среди них относительная сложность подготовки документов со сложным расположением материала на странице (для таких типов документов, практически не встречающихся в научно-технической литературе, \TeX{} не предназначен).В добавок для \TeX{} работа с исходным текстом и просмотр того, как текст будет выглядеть на печати, — разные операции,то есть чтобы посмотреть, как будет выглядеть на печати набираемый текст, надо запустить отдельную программу, что может увеличить временные затраты на подготовку документа.
+
+
+\subsection{MiKTeX} 
+   
+   В Windows дистрибутив \LaTeX{} называется MikTeX.
+
+Одним из существенных достоинств MiKTeX является возможность автоматического обновления установленных компонентов и пакетов. Особенности последних версии MiKTeX (2.7-2.8) является интегрированная поддержка XeTeX, MetaPost, pdfTeX и совместимость с Windows Vista, Windows Server 2008 и Windows 7.
+
+В состав MiKTeX включены:
+\begin{spacing}{1.0}
+\begin{itemize}% начало помеченного списка
+\item классический \TeX -компилятор;
+\item различные варианты TeX: pdfTeX, e-TeX, pdf-e-TeX, Omega, e-Omega, NTS;
+\item конверторы TeX в PDF;
+\item MetaPost(интерпретатор языка программирования META, который можно использовать для создания графических иллюстраций.);
+\item полный набор общеиспользуемых макропакетов: LaTeX, ConTeXt и др.;
+\item средство просмотра Yap;
+\item инструменты и утилиты;
+\end{itemize}% конец помеченного списка
+\section{Git} 
+\end{spacing}
+\subsection{Описание системы}
+Система контроля версий Git предназначена для контролируемого внесения изменений в
+процессе разработки программного обеспечения, а также при написании статей и другом
+роде деятельности, связанном с редактированием текстовых файлов (для удобства в
+дальнейшем будем обсуждать только тексты программ). Система позволяет отследить
+происходящие изменения в исходных текстах программ, что делает удобной совместную
+разработку.
+ \\
+ 
+Git ,в отличие от большинства систем контроля версий, хранит свои данные следующим образом. Он считает хранимые данные набором слепков небольшой файловой системы. Каждый раз, когда вы фиксируете текущую версию проекта, Git сохраняет слепок того, как выглядят все файлы проекта на текущий момент. Ради эффективности, если файл не менялся, Git не сохраняет файл снова, а делает ссылку на ранее сохранённый файл. Иллюстрированный пример показан ниже.
+\begin{figure}[h]
+\centering
+ \includegraphics[width=1\textwidth]{1}
+\end{figure}
+\\
+
+ Для совершения большинства операций в Git'е необходимы только локальные файлы и ресурсы, т.е. обычно информация с других компьютеров в сети не нужна. Поскольку вся история проекта хранится локально у вас на диске, большинство операций кажутся практически мгновенными.
+ К примеру, чтобы показать историю проекта, Git'у не нужно скачивать её с сервера, он просто читает её прямо из вашего локального репозитория. Поэтому историю вы увидите практически мгновенно. Если вам нужно просмотреть изменения между текущей версией файла и версией, сделанной месяц назад, Git может взять файл месячной давности и вычислить разницу на месте, вместо того чтобы запрашивать разницу у сервера или качать с него старую версию файла и делать локальное сравнение.
+ \\
+ 
+ Перед сохранением любого файла Git вычисляет контрольную сумму, и она становится индексом этого файла. Поэтому невозможно изменить содержимое файла или каталога так, чтобы Git не узнал об этом. Если информация потеряется при передаче или повредится на диске, Git всегда это выявит.
+ Механизм, используемый Git'ом для вычисления контрольных сумм, называется SHA-1 хешем. Это строка из 40 шестнадцатеричных символов (0-9 и a-f), вычисляемая в Git'е на основе содержимого файла или структуры каталога. SHA-1 хеш выглядит примерно так:
+  \underline{\textbf{24b9da6552252987aa493b52f8696cd6d3b00373}}
+ \\
+ 
+ Практически все действия, которые вы совершаете в Git'е, только добавляют данные в базу. Очень сложно заставить систему удалить данные или сделать что-то неотменяемое. Можно, как и в любой другой системе контроля версий, потерять данные, которые вы ещё не сохранили, но как только они зафиксированы, их очень сложно потерять, особенно если вы регулярно отправляете изменения в другой репозиторий.
+ \\
+ 
+ В проектах, использующих Git, есть три части: каталог Git'а (Git directory), рабочий каталог (working directory) и область подготовленных файлов (staging area).
+ 
+\begin{figure}[h]
+\centering
+ \includegraphics[width=1\textwidth]{2}
+\end{figure}
+\newpage
+Каталог Git'а — это место, где Git хранит метаданные и базу данных объектов вашего проекта. Это наиболее важная часть Git'а, и именно она копируется, когда вы клонируете репозиторий с другого компьютера.
+Рабочий каталог — это извлечённая из базы копия определённой версии проекта. Эти файлы достаются из сжатой базы данных в каталоге Git'а и помещаются на диск для того, чтобы вы их просматривали и редактировали.
+Область подготовленных файлов — это обычный файл, обычно хранящийся в каталоге Git'а, который содержит информацию о том, что должно войти в следующий коммит. 
+Стандартный рабочий процесс с использованием Git'а выглядит примерно так:
+\\
+
+\textbf{1.}	Вы вносите изменения в файлы в своём рабочем каталоге.
+
+\textbf{2.}	Подготавливаете файлы, добавляя их слепки в область подготовленных файлов.
+
+\textbf{3.}	Делаете коммит, который берёт подготовленные файлы из индекса и помещает их в каталог Git'а на постоянное хранение.
+\\
+
+Если рабочая версия файла совпадает с версией в каталоге Git'а, файл считается зафиксированным. Если файл изменён, но добавлен в область подготовленных данных, он подготовлен. Если же файл изменился после выгрузки из базы данных, но не был подготовлен, то он считается изменённым. 
+Существует множество различных клиентов для работы с Git,как имеющие графический интерфейс ,обеспечивающий удобство использования системы,так и представленных в виде командной строки,дающий немного большую гибкость.
+Далее представлены основные команды Git:
+
+\subsection{Основные команды Git}
+
+\subsubsection{Начальная настройка}
+• Указать глобальное имя пользователя: \textbf{ git config --global user.name "Den Bes"}\\
+• Указать глобальный user email: \textbf{ git config --global user.email bdvx2507@gmail.com}\\
+• Указать редактор, который будет использоваться, когда нужно ввести сообщение в Git: \textbf{ git config --global core.editor emacs}\\
+• Указать утилиту сравнения, которая будет использоваться для разрешения конфликтов слияния: \textbf{ git config --global merge.tool vimdiff}\\
+• Просмотреть используемые настройки: \textbf{ git config –-list}\\
+\subsubsection{Работа с репозиторием}
+• Инициализировать репозиторий: \textbf{ git init}\\
+• Показать статус репозитория: \textbf{ git status}\\
+• Коммит с указанием комментария: \textbf{ git commit -m 'some entry script fixes'}\\
+• Коммит с указанием комментария и автоматической индексацией: \textbf{git commit -a -m 'some entry script fixes'}\\
+• Добавить файл в индекс: \textbf{ git add index.php}\\
+• Посмотреть изменения между рабочим каталогом и индексом: \textbf{ git diff}\\
+• Посмотреть изменения между последним коммитом и индексом: \textbf{ git diff –cached}\\
+• Удалить файл из индекса и из рабочего каталога: \textbf{ git rm readme.txt}\\
+• Удалить файл из индекса, оставив его при этом в рабочем каталоге: \textbf{ git rm --cached readme.txt}\\
+• Исключить файл (который находится в индексе, но еще не за коммитен) из индексации: \textbf{ git reset HEAD readme.txt}\\
+• Просмотр истории коммитов: \textbf{ git log}\\
+\subsubsection{Работа с удаленным сервером}
+• Просмотреть какие удалённые серверы уже настроены, параметр -v отображает так же url сервера: \textbf{ git remote –v}\\
+• Добавить новый удалённый репозиторий под именем den: \textbf{ git remote add den git:\\github.com/paulboone/ticgit.git}\\
+• Посмотреть список коммитов репозитория den ветки master, которые были выполнены после последнего pull-а: \textbf{ git log den/master}\\
+• Извлечь (fetch) всю информацию, которая есть в репозитории den: \textbf{ git fetch den}\\
+• Слить (merge) информацию, которую получили через fetch с рабочим каталогом: \textbf{ git merge den/master}\\
+• Отправить (push) код в ветку master удаленного репозитория den: \textbf{ git push den master}\\
+• Переименовать удаленный репозиторий из den на paul: \textbf{ git remote rename den paul}\\
+• Удалить удаленный репозиторий paul: \textbf{ git remote rm paul}\\
+\subsubsection{Работа с метками}
+• Просмотр имеющихся меток: \textbf{ git tag}\\
+• Создание аннотированной метки: \textbf{ git tag -a v1.4 -m 'my version 1.4'}\\
+• Создание легковесной метки: \textbf{ git tag v1.4}\\
+• Просмотр данных метки: \textbf{ git show v1.4}\\
+• Создание метки для какого-либо существующего коммита (9fceb02 - контрольная сумма коммита, или ее часть): \textbf{ git tag -a v1.2 9fceb02}\\
+• Отправить метку на удалённый сервер: \textbf{ git push den v1.5}\\
+\subsubsection{Работа с ветками}
+• Отобразить список веток проекта: \textbf{ git branch}\\
+• Отобразить список веток с последними коммитами: \textbf{ git branch –v}\\
+• Создать новую ветку с названием "br1":\textbf{ git branch br1}\\
+• Переключиться на ветку br1: \textbf{ git checkout br1}\\
+• Создать ветку с названием "br1" и переключиться на нее: \textbf{ git checkout -b br1}\\
+• Создать ветку с названием "articles" на основе ветки "articles" из удаленного сервера den и переключиться на нее: \textbf{ git checkout -b articles den/articles}\\
+• Слить текущую ветку с веткой hotfix: \textbf{ git merge hotfix}\\
+• Переименовать ветку "articles" в "content":\textbf{ git branch -m articles content}\\
+• Удалить ветку hotfix: \textbf{ git branch -d hotfix}\\
+• Удалить ветку hotfix на удаленном сервере den: \textbf{ git push den :hotfix}\\
+• Запустить графический инструмент для отображения конфликтных ситуаций: \textbf{ git mergetool}\\
+• Посмотреть список веток, которые уже слиты с текущей: \textbf{ git branch –merged}\\
+• Посмотреть список веток, которые содержат наработки, но еще не слиты с текущей: \textbf{ git branch --no-merged}\\
+
+
+
+Использованные материалы:
+\\
+
+http://zelmanov.ptep-online.com/ctan/llang1992.pdf
+
+
+http://www.intuit.ru/xml/course/LaTeX.pdf
+
+
+http://ru.wikipedia.org/wiki/LaTeX
+
+http://cluster.krc.karelia.ru/doc/rukovodstvo\_GIT.pdf
+
+\begin{spacing}{1}
+\parindent=33ex 
+\section{Симулятор NS-3} 
+\end{spacing}
+NS3 является свободным программным обеспечением, распространяемым под лицензией GNU GPLv2, и ориентирован на исследовательское применение, а так же применение в образовательных целях. Исходные коды NS3 открыты для исследования, модификации и использования и доступны на сайте проекта http://www.nsnam.org.
+
+Существует множество инструментов моделирования для исследований сетей . Ниже приведены несколько отличительных особенностей Ns -3:\\
+
+• NS -3 выполнен в виде набора библиотек, которые могут быть объединены вместе, а также с другими внешними библиотеками программного обеспечения. Некоторые графические платформы и программы анализа данных могут быть использованы для работы с NS-3.Работа с ns-3 осуществляется в командной строке Ns C++ и / или Python.\\
+
+• NS-3 в основном используется в системах Linux , хотя поддержка существует для FreeBSD , Windows , а также находится в процессе разработки для Microsoft Visual Studio.\\
+
+Благодаря очень обширному и гибкому API, а так же благодаря полноте документации программных интерфейсов, разработчик модели практически ничем не ограничивается. Ему предоставляется возможность построения как собственных моделей любой сложности, так и, благодаря используемой лицензии GNU GPLv2, изменение и дополнение уже существующих моделей, входящих в комплект ПО.
+
+В NS3 разработаны модели беспроводных типов сетей, позволяющие проводить моделирование даже с движущимися объектами в трёхмерном пространстве. Разработаны модели для построения проводных топологий различной сложности, а также смешанных. Присутствует реализация различных типов Mesh-сетей на основе стека протоколов 802.11s, за счёт чего NS3 даёт фору даже многим коммерческим симуляторам. Разработан FrameWork под названием FlowMonitor, предоставляющий очень гибкие методы сбора самых различных показаний с моделируемых активных сетевых устройств и каналов связи. Симулятор не имеет собственного графического интерфейса, однако для средств визуализации моделей используются проекты NetAnimator и PyViz. 
+
+Работа над проектом NS3 не прекращается. Многие крупные компании опубликовали работы, в которых исследования основываются на NS3. Так же заявлена некоторыми компаниями и институтами разработка различных фреймворков для работы с симулятором. Ежедневно появляются новые всё более и более сложные модели, написанные членами сообщества.
+Данный симулятор способен удовлетворить потребности к имитационному моделированию современных телекоммуникационных систем, очень перспективен в разработке благодаря авторам проекта и сообществу, которые непрерывно улучшают проект, разрабатывая новые модели и исправляя старые ошибки. Он способен обеспечивать моделирование сетей следующего поколения, что обеспечивает возможность его использования в ближайшем будущем.
+
+
+\subsection{Ресурсы}
+\subsubsection{Web}
+Есть несколько важных ресурсов, которые любой NS-3 пользователь должен знать. Основной сервер находится в http://www.nsnam.org и обеспечивает доступ к основной информации о системе NS-3. Подробная документация доступна через главный веб-сайт в http://www.nsnam.org/documentation/. Существует вики-проект, который дополняет основной веб-сайт по NS-3, который вы найдете в http://www.nsnam.org/wiki/.
+\subsubsection{Mercurial}
+Комплексные программные системы нуждаются в изменениях исходного кода и документации. Есть много способов для выполнения этого.  Распределенная система контроля версий, вероятно, шим образом подходит для этих целей. Проект NS-3 использует Mercurial в качестве источника системы управления кодом .  Mercurial имеет свой веб-сайт по адресу http://www.selenic.com/mercurial/ .
+Вы также можете найти важную информацию о совместном использовании Mercurial и NS-3 на главном веб-сайте NS-3.
+\subsubsection{Waf}
+Если ваш исходный код загрузился на локальную систему, вы должны будете скомпилировать код , чтобы  получить полезную рабочую программу. Так же, как в случае управления исходным кодом есть много инструментов, доступных для выполнения этой функции.
+Вероятно, наиболее известным из этих инструментов является MAKE. Наряду с тем, самым известным, MAKE, вероятно, наиболее трудно используемый в очень большой и настраиваемой системе. Из-за этого, многие альтернативы были разработаны. В последнее время эти системы были разработаны с использованием языка Python.
+Система сборки Waf используется в NS- 3. Основной веб-сайт можно найти на http://code.google.com/p/waf/ .
+
+\subsubsection{Среда разработки}
+Как упоминалось выше, сценарии в NS- 3 написаны на C++ или Python. Большинство NS-3 API доступны в Python , но модели также написаны и для C++.
+Система NS- 3 использует некоторые компоненты GNU-инструментария для разработки. 
+Для тех, кто работает под Windows , есть среды , которые имитируют среду Linux в различной степени . 
+
+
+\subsection{Работа с NS-3}
+\subsubsection{Обзор}
+NS-3 построена как система программных библиотек , которые работают вместе .
+Пользовательские программы написаны на языках C++ или Python.
+NS-3 распространяется в виде исходного кода , а это означает , что целевая система должна обладать средой разработки программного обеспечения для создания библиотеки , а затем создания  пользовательской программы. NS- 3 может распространяться как готовые библиотеки для отдельных систем, однако в настоящее время многие пользователи работает путем самостоятельного редактирования NS-3.
+\subsubsection{Загрузка NS-3,использование Tarball.}
+Архив находится в определенном формате программного обеспечения, где несколько файлов связаны вместе и архив возможно сжат. Версии программного обеспечения NS-3  предоставляются через загружаемый архив. Процесс загрузки NS-3 через архив прост: вы должны выбрать версию, скачать  и распаковать ее.\\
+\textit{\\
+ cd\\
+ mkdir workspace\\
+ cd workspace\\
+ wget http://www.nsnam.org/releases/ns-allinone-3.17.tar.bz2\\
+ tar xjf ns-allinone-3.17.tar.bz2 \\
+\subsubsection{Построение NS- 3 с build.py}
+Если Вы скачали архив ,у вас должен быть каталог с именем типа NS-AllInOne-3,17  в директории ~ /workspace. Введите следующее:\\
+ ./build.py --enable-examples --enable-tests\\
+Вы увидите множество типичных выводов(сообщений)компилятора , отображаемых в виде сценария.
+ В конце концов вы должны увидеть следующий текст:\\}
+
+
+\textit{Waf: Leaving directory\\ ‘/path/to/workspace/ns-allinone-3.17/ns-3.17/build’\\
+’build’ finished successfully (6m25.032s)\\
+Modules built:\\
+antenna aodv applications\\
+bridge buildings config-store\\
+core csma csma-layout\\
+dsdv dsr emu\\
+energy fd-net-device flow-monitor\\
+internet lte mesh\\
+mobility mpi netanim (no Python)\\
+network nix-vector-routing olsr\\
+point-to-point point-to-point-layout propagation\\
+spectrum stats tap-bridge\\
+test (no Python) tools topology-read\\
+uan virtual-net-device wifi\\
+wimax\\
+Modules not built (see ns-3 tutorial for explanation):\\
+brite click openflow\\
+visualizer\\
+Leaving directory ‘./ns-3.17’\\
+Regarding the portion about modules not built:\\
+Modules not built (see ns-3 tutorial for explanation):\\
+brite click openflow\\
+visualizer\\}
+Это  означает, что некоторые модули NS-3 , которые зависят от внешних библиотек , возможно, не были построены, или , что конфигурация специально попросила не строить их . Это не значит, что симулятор не построен успешно или что это обеспечит неправильные результаты для перечисленных модулей.
+\subsubsection{Тестирование NS-3}
+Вы можете запустить тесты NS-3 (проверку, что все настроено правильно), выполнив команду :\\
+\textit{ ./test.py -c core}\\
+Эти тесты выполняются параллельно WAF. 
+Должно вывести следующее:\\
+\textit{92 of 92 tests passed (92 passed, 0 failed, 0 crashed, 0 valgrind errors)}\\
+Это важное сообщение.
+Вы также увидите вывод из тестера испытаний и вывод будет выглядеть примерно так:\\
+\textit{Waf: Entering directory\\ ‘/path/to/workspace/ns-3-allinone/ns-3-dev/build’\\
+Waf: Leaving directory\\ ‘/path/to/workspace/ns-3-allinone/ns-3-dev/build’\\
+’build’ finished successfully (1.799s)\\
+Modules built:\\
+aodv applications bridge\\
+click config-store core\\
+csma csma-layout dsdv\\
+emu energy flow-monitor\\
+internet lte mesh\\
+mobility mpi netanim\\
+network nix-vector-routing ns3tcp\\
+ns3wifi olsr openflow\\
+point-to-point point-to-point-layout propagation\\
+spectrum stats tap-bridge\\
+template test tools\\
+topology-read uan virtual-net-device\\
+visualizer wifi wimax\\
+PASS: TestSuite ns3-wifi-interference\\
+PASS: TestSuite histogram\\
+PASS: TestSuite sample\\
+PASS: TestSuite ipv4-address-helper\\
+PASS: TestSuite devices-wifi\\
+PASS: TestSuite propagation-loss-model\\
+...\\
+PASS: TestSuite attributes\\
+PASS: TestSuite config\\
+PASS: TestSuite global-value\\
+PASS: TestSuite command-line\\
+PASS: TestSuite basic-random-number\\
+PASS: TestSuite object\\
+PASS: TestSuite random-number-generators\\
+92 of 92 tests passed (92 passed, 0 failed, 0 crashed, 0 valgrind errors)\\}
+Эта команда обычно используется пользователями, чтобы быстро проверить, что NS- 3 успешно развернут.
+\subsubsection{Выполнение сценария}
+Как правило, мы запускаем скрипты под контролем Waf . Это позволяет системе сборки убедиться, что общие библиотечные пути установлены правильно и что библиотеки доступны во время выполнения. Для запуска программы , просто используйте –run в  Waf . Давайте запустим программу NS-3,выводящую  “hello world” введя следующее :\\
+\textit{ ./waf --run hello-simulator\\}
+Waf сначала проверяет, чтобы убедиться, что программа построена правильно и выполняет построение, если требуется.Затем Waf  выполняет программу, которая выдает следующий результат:\\
+\textit{Hello Simulator}\\
+
+Если вы видите WAF сообщения, указывающие , что сборка была завершена успешно , но не видите "Hello Simulator", есть вероятность, что вы включили ваш билд режим "optimized" в "Building with Waf" раздел, но забыли вернуться к "Debug" режиму.
+Если вы не видите "Hello Simulator" , введите следующее:\\
+\textit{./waf configure -d debug --enable-examples --enable-tests\\}
+Чтобы дать команду WAF создать отладочные версии NS -3 программы, которые включают примеры и тесты. Вы все еще должны построить текущую версию отладки кода , набрав :\\
+ \textit{./waf\\}
+Теперь, если вы запустите hello-simulator программы , вы должны увидеть соответствующий результат .
+
+
+
+Для нашего исследования(симуляции) нам понадобятся такие программы как Radio Mobile  (симулятор  радиосистем) и NS-3,о котором ранее было рассказано.
+\subsection{Описание Radio Mobile}
+Radio Mobile является бесплатным инструментом для построения моделей радиосистем и прогнозирования их работы . Программа способна отрисовывать карты с использованием данных о местности, рельефа для автоматического извлечения профиля пути между излучателем и приемником.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\linewidth]{./rmw-link}
+\caption{}
+\label{fig:rmw-link}
+\end{figure}
+
+
+Программное обеспечение также обеспечивает 3D-просмотр , стереоскопический вид и анимацию. Фоновая картинка может быть объединена с отсканированными картами или спутниковыми фотографиями.
+Radio Mobile имеет ряд серьезных недостатков : во-первых, это не свободно распространяемое ПО, но бесплатное, и исходный код не доступен. Во-вторых, она написана на Visual Basic , что исключает мультиплатформенность . 
+
+\subsection{Установка}
+\subsubsection{Radio Mobile}
+Устанавливаем wine :\\
+
+$ apt-get install wine\\
+
+
+Устанавливаем Radio Mobile в любую директорию используя команды:\\
+
+$ cd path/to/radiomobile/\\
+
+$ wine rmweng.exe
+
+
+\subsubsection{NS-3-Wireless-planning} 
+Скачать из источника:\\
+
+$ hg clone http://ns3-wireless-planning.googlecode.com/hg/ ns3-wireless-planning 
+
+ 
+
+\subsection{Построение}
+
+Наша сеть будет беспроводной,и состоять из:\\
+
+
+7 узлов(nodes,или хостов) ( Josjojauarina1 , Josjojauarina2 , Ccatcca , Kcauri , Urpay , Huiracochan , Urcos ).\\
+
+4 подсети : Josjojauarina2 - Ccatcca - Kcauri (WiMAX ) , Josjojauarina1 - Josjojauarina2 (WiFi), Josjojauarina1 - Urpay - Huiracochan (WiFi), Huiracochan - Urcos (WiFi) .
+
+\subsubsection{Карта и узлы}
+Сначала создайте узлы ( в Radio Mobile именуемые units ):\\
+
+File -> Unit properties\\
+
+И настройте свойства карты:\\
+
+File -> Map properties\\
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\linewidth]{./rmw-report}
+\caption{}
+\label{fig:rmw-report}
+\end{figure}
+
+
+
+Теперь вы должны увидеть единицы, расположенные на карте:
+\begin{figure}
+\centering
+\includegraphics[width=0.9\linewidth]{./rmw-map}
+\caption{}
+\label{fig:rmw-map}
+\end{figure}
+
+
+
+
+\subsubsection{Сети и системы}
+Когда узлы помещаются на карту , мы должны указать подсети (ссылки) и системы ( типы интерфейсов), которые они будут использовать.\\
+
+
+Создаем четыре сети , с указанием типа сети (WiFi / WiMAX ) в скобках имя сети .\\
+
+
+File -> Network properties\\
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\linewidth]{./rmw-networks}
+\caption{}
+\label{fig:rmw-networks}
+\end{figure}
+
+
+Наименования режимов WiFi должны быть сокращены , потому что Radio Mobile сокращает названия до 20 символов. Используем эту таблицу для кодирования WiFi / WiMAX режимов :\\
+
+
+\begin{tabular}{|l|l|}
+\hline Режим&	Наименование для Radio Mobile   \\ 
+\hline WiFi A 6Mbps	   & WFa6\\
+\hline   WiFi A 12Mbps&	 WFa12 \\ 
+\hline WiFi B 6Mbps	 &  WFb1
+       \\ 
+\hline WiFi B 12Mbps &	 WFb2
+         \\ 
+\hline WiMAX BPSK 1/2	 & WXbk12
+          \\ 
+\hline WiMAX QPSK 1/2	&   WXqk12
+         \\ 
+\hline WiMAX QPSK 3/4	& WXqk34
+             \\ 
+\hline WiMAX 16 QAM 1/2	&   WX16qm12
+             \\ 
+\hline WiMAX 16 QAM 3/4	& WX16qm34
+               \\ 
+\hline   WiMAX 64 QAM 2/3	&   WX64qm23
+                   \\ 
+\hline WiMAX Base Station	 &  WXall   \\ 
+\hline   
+\end{tabular} 
+\\
+
+Например, если вы создали систему под названием mysystem и вы планируете использовать ее с 802.11a при скорости 18 Мбит , вы задаете имя системы как " mysystem WFa18 " .\\
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\linewidth]{./rmw-systems}
+\caption{}
+\label{fig:rmw-systems}
+\end{figure}
+
+
+Наконец, необходимо определить топологию сети. Обозначьте роль точек доступа ( Wi-Fi )  или базовых станций (WiMAX ) как Master,а роль Slave оставьте для станций WiFi и абонентских станций  WiMAX  :\\
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\linewidth]{./rmw-membership}
+\caption{}
+\label{fig:rmw-membership}
+\end{figure}
+
+
+
+
+\subsubsection{Создание отчета}
+Извлеките всю необходимую информацию из сети с сохранением ее в  текстовом файле (сетевой отчет):\\
+
+
+Tools -> Network report -> File\\
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\linewidth]{./rmw-report}
+\caption{}
+\label{fig:rmw-report}
+\end{figure}
+
+
+
+\subsubsection{Преобразование сетевого отчета}
+Сетевой отчет( report.txt ) созданный Radio Mobile должен быть преобразован в отчет NetInfo, чтобы наш модуль в NS- 3 его “понял” :\\
+
+
+$ cd ns3-wireless-planning/ns-3\\
+
+$ PYTHONPATH=../radiomobile python radiomobile_ns3_report.py report.txt\\
+ > netinfo.txt
+
+
+
+\subsubsection{Имитация сети}
+Теперь пришло время для запуска моделирования с NS-3 . ns3-Wireless-planning добавляет некоторую инфраструктуру для NS-3 что делает возможным разбор NetInfo файла, созданный на предыдущем шаге . Смоделируем производительность 2 потоков , работающих одновременно ( Urcos - Huiracochan и Urcos - Ccatcca ) .\\
+
+
+Скопируем NetInfo файл в корневой каталог NS-3:\\
+
+$ cp /path/somewhere/netinfo.txt ns-3\\
+
+$ cd ns-3\\
+
+
+Напишем код с именем  scratch/wireless-planning-mysimulation.cc:\\
+
+
+#include "ns3/core-module.h"\\
+
+#include "ns3/simulator-module.h"\\
+
+#include "ns3/helper-module.h"\\
+
+#include "wireless-planning/net-test.h"\\
+
+#include "wireless-planning/create-network.h"\\
+
+#include "wireless-planning/network-config.h" \\
+
+#include "wireless-planning/print.h"\\
+
+#include "wireless-planning/netinfo-reader.h"\\
+
+#include "wireless-planning/report-2-config-data.h"\\
+
+using namespace ns3;\\
+
+NS_LOG_COMPONENT_DEFINE ("mysimulation");\\
+
+int\\
+
+main (int argc, char *argv[])\\
+
+\{\\
+
+  Time eos = Seconds (5);\\
+
+  / * Обработка параметров командной строки * /\\
+  CommandLine cmd;\\
+  
+  cmd.AddValue ("netinfo", "Network Information File", netInfoFile);\\
+  
+  cmd.Parse (argc, argv);\\
+
+  / * Чтение NetInfo и построение сетей * /\\
+  
+NetDataStruct::NetData netData = NetinfoReader::Read ((netInfoFile));\\
+  Print::Netinfo (netData);\\
+  NetworkConfig::NetworkData networkData =\\ Report2ConfigData::NetData2NetworkData (netData);\\
+  Print::NetworkData (networkData);\\
+  CreateNetwork createNetwork;\\
+  NodeContainer nodes = createNetwork.Create (networkData);\\
+  Print::NodeList (nodes);\\
+
+  / * Начало симулятора* /\\
+NetTest netTest;\\
+  netTest.EnablePcap("Josjojauarina 2", 1);\\
+    
+  netTest.ApplicationSetup ("Urcos", "Ccatcca", 1.0, 3.0, "10Mbps",\\ 1452, NULL);\\
+  netTest.ApplicationSetup ("Urcos", "Huiracochan", 2.0, 4.5, "10Mbps", 1452, NULL);\\
+
+  std::vector < string > flowNames;\\
+  flowNames.push_back ("Urcos-Ccatcca");\\
+  flowNames.push_back ("Urcos-Huiracochan");\\
+
+  / * Установка всех основных систем: измерение производительности ,gnuplot * /\\
+NetMeasure netMeasure (eos, Seconds (0.1));\\
+  netMeasure.SetupPlot ();\\
+  netMeasure.SetFlowNames (flowNames);\\
+  netMeasure.SetFlowMonitor (nodes);\\
+  netMeasure.GetFlowStats ();\\
+
+  Simulator::Stop (eos);\\
+  
+  NS_LOG_INFO ("Starting simulation...");\\
+  Simulator::Run ();\\
+  Simulator::Destroy ();\\
+  NS_LOG_INFO ("Done.");\\
+  
+  return 0;\\
+\}\\
+
+Начнем моделирование :\\
+
+\textit{$ export NS_\LOG="PacketSink=level_\all|prefix_\time"\\
+$ ./waf --run "scratch/wireless-planning-mysimulation\\ --netinfo=netinfo.txt"\\
+$ gnuplot *.plt\\}
+
+Gnuplot создаст изображение формата PNG для каждого участка сгенерированнонго NS- 3 . В нашем случае :\\
+\begin{figure}
+\centering
+\includegraphics[width=0.9\linewidth]{./net-measure_DelayHist}
+\caption{}
+\label{fig:net-measure_DelayHist}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\linewidth]{./net-measure_DelayMean}
+\caption{}
+\label{fig:net-measure_DelayMean}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\linewidth]{./net-measure_LostPackets}
+\caption{}
+\label{fig:net-measure_LostPackets}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\linewidth]{./net-measure_Throughput}
+\caption{}
+\label{fig:net-measure_Throughput}
+\end{figure}
+
+\newpage
+\subsection{Использованные источники:}\\
+
+Latex\\
+http://zelmanov.ptep-online.com/ctan/llang1992.pdf\\
+http://www.intuit.ru/xml/course/LaTeX.pdf\\
+http://ru.wikipedia.org/wiki/LaTeX\\
+
+Git\\
+http://cluster.krc.karelia.ru/doc/rukovodstvo\_GIT.pdf
+\subsection{Ссылка на ресурс github:}
+https://github.com/bdvx/Practic.git
+
+
+
+
+\newpage
+\begin{figure}[h]
+\centering
+ 
+\end{figure}
+\newpage
+
+
+\end{spacing}
+\end{large}
+
+
+%\LaTeX{} 
+
+
+\end{document}
